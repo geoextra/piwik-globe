@@ -1,0 +1,30 @@
+#title {
+  padding: 25px
+}
+
+#globe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#ui {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#menu {
+  text-align: right;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+#changeSite, #changeTime{
+  position: relative;
+  top: -15px;
+  right: 10px;
+}

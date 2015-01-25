@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "0.11"
+  - "0.10"
+before_script:
+  - npm install -g gulp
+script: gulp ci
+
+deploy:
+  provider: divshot
+  api_key:
+    secure: RymowzV4BeAx3WBA3MoWRCuDfWvTeOUN84Nby2y9iXQWaSrGvka3XUpYtoa/m0GisAvEsqNsArmFnqiK+BhKNuHfZ9ZDw6RRhSUqBS8N5I+CyIlspK+fAIOOlnAPckP2tlfrZhC2JJMpy378Gm4W9cYn3TomRI9+fsg5qKdv/+M=
+  environment:
+    master: development
+  on:
+    repo: staticshowdown/ss15-develofy

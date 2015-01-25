@@ -1,0 +1,77 @@
+extends ./layout.jade
+
+block head
+  link(href='./third-party/dropdown.js/jquery.dropdown.css', rel='stylesheet')
+  link(href='./third-party/bootstrap-datepicker/css/datepicker.css', rel='stylesheet')
+  link(href='./third-party/bootstrap-datepicker/css/datepicker3.css', rel='stylesheet')
+  link(href='./third-party/sweetalert/lib/sweet-alert.css', rel='stylesheet')
+  link(href='./index.css', rel='stylesheet')
+
+block footer
+  script(src='./check.js')
+  script(src='./third-party/dropdown.js/jquery.dropdown.js')
+  script(src='./third-party/bootstrap-datepicker/js/bootstrap-datepicker.js')
+  script(src='./third-party/sweetalert/lib/sweet-alert.min.js')
+  script(src='./third-party/three.js/three.min.js')
+  script(src='./third-party/tweenjs/build/tween.min.js')
+  script(src='./third-party/globe.js')
+  script(src='./index.js')
+
+block content
+  #title
+    h1 #{app.name}
+
+  #globe
+  
+  #ui
+    #changeSite.collapse
+      .panel.panel-material-red
+        .panel-heading
+          h3.panel-title Select your site:
+        .panel-body
+          .input-group.form-group.form-group-material-red
+            select#site.form-control.dropdown-menu-material-red(placeholder='One of your sites...')
+    
+    #changeTime.collapse
+      .panel.panel-material-red
+        .panel-heading
+          h3.panel-title Choose the dates to display:
+        .panel-body
+          #date
+            .input-daterange.input-group.form-group.form-group-material-red
+              input#startdate.input-sm.form-control(type='text', name='start')
+              span.input-group-addon to
+              input#enddate.input-sm.form-control(type='text', name='end')
+    
+    #addData.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDataLabel', aria-hidden='true')
+      .modal-dialog
+          .modal-content
+            .modal-header
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') &times;
+              |         
+              h4#addDataLabel.modal-title Add a Piwik-Installation
+            |       
+            .modal-body
+              b Please type in your data, it won't send to anybody:
+              .row
+                .col-md-6
+                  .input-group.form-group.form-group-material-red
+                    input#url.form-control.floating-label(type='url', placeholder='Piwik-URL')
+                    input#token.form-control.floating-label(type='text', placeholder='Access-Token')
+                .col-md-6
+                  .input-group.form-group.form-group-material-red
+                    #useDemo.checkbox.checkbox-material-red
+                      label
+                        input(type='checkbox')
+                        | Use demo.piwik.org &nbsp;
+            |       
+            .modal-footer
+              button.btn.btn-default(type='button', data-dismiss='modal') Close
+              |         
+              button#addDataButton.btn.btn-primary.btn-material-red(type='button') Add my data!
+    
+    #menu
+      button#addDataToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-content-add(data-toggle='modal', data-target='#addData')
+      button#changeSiteToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-av-web(data-toggle='collapse', data-target='#changeSite', disabled)
+      button#changeTimeToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-action-query-builder(data-toggle='collapse', data-target='#changeTime', disabled)

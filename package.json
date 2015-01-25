@@ -1,0 +1,29 @@
+{
+  "name": "piwik-globe",
+  "version": "0.0.1",
+  "description": "A web app, which displays Piwik data on a cool WebGL globe.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staticshowdown/ss15-develofy.git"
+  },
+  "author": "Moritz Gehlhaar / Team Develofy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staticshowdown/ss15-develofy/issues"
+  },
+  "homepage": "https://github.com/staticshowdown/ss15-develofy",
+  "private": true,
+  "dependencies": {
+    "browser-sync": "^1.9.1",
+    "gulp": "^3.8.10",
+    "gulp-bower": "0.0.10",
+    "gulp-changed": "^1.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-coffee": "^2.2.0",
+    "gulp-jade": "^0.11.0",
+    "gulp-util": "^3.0.2"
+  }
+}
