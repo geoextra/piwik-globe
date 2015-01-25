@@ -38,10 +38,10 @@ block content
     #changeTime.collapse
       .panel.panel-material-red
         .panel-heading
-          h3.panel-title Choose the dates to display:
+          h3.panel-title Choose dates to display:
         .panel-body
           #date
-            .input-daterange.form-group.form-group-material-red
+            .input-daterange.input-group.form-group.form-group-material-red
               input#startdate.input-sm.form-control(type='text', name='start')
               span.input-group-addon to
               input#enddate.input-sm.form-control(type='text', name='end')
@@ -53,7 +53,7 @@ block content
               button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') &times;
               |         
-              h4#addDataLabel.modal-title Add a Piwik-Installation
+              h4#addDataLabel.modal-title Add a Piwik installation
             |       
             .modal-body
               b Please type in your data, it won't send to anybody:
@@ -61,7 +61,7 @@ block content
                 .col-md-6
                   br
                   .form-group.form-group-material-red
-                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='https://analytics.example.org/')
+                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='http://analytics.example.org/')
                   .form-group.form-group-material-red
                     input#token.form-control.floating-label.input-lg(type='text', placeholder='Access-Token', value='te251m3u27ci3alb914ijb245fa14yfs')
                 .col-md-6

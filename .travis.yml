@@ -12,6 +12,7 @@ deploy:
     secure: RymowzV4BeAx3WBA3MoWRCuDfWvTeOUN84Nby2y9iXQWaSrGvka3XUpYtoa/m0GisAvEsqNsArmFnqiK+BhKNuHfZ9ZDw6RRhSUqBS8N5I+CyIlspK+fAIOOlnAPckP2tlfrZhC2JJMpy378Gm4W9cYn3TomRI9+fsg5qKdv/+M=
   environment:
     master: development
+    ss15-entry: production
   on:
     repo: staticshowdown/ss15-develofy
   skip_cleanup: true
