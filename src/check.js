@@ -1,4 +1,4 @@
-if (!System.support.canvas || !System.support.webgl) {
+if (!System.support.webgl || !System.support.canvas || !System.support.requestAnimationFrame) {
   console.error('System not supported...');
   document.location.href = './error.html';
 } else {
