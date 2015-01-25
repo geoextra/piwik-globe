@@ -12,9 +12,13 @@ $(document).ready( function() {
   
   // create the globe
   var globeObject = document.getElementById('globe');
-  var globe = new DAT.Globe(globeObject);
+  var color = function() { 
+    var c = new THREE.Color('rgb(244,67,54)');
+    return c;
+  };
+  var globe = new DAT.Globe(globeObject, { colorFn: color });
   globe.animate();
-  
+
   // global index for data naming
   var index = 0;
   var url, token;
