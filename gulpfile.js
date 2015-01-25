@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 var changed = require('gulp-changed');
 var clean = require('gulp-clean');
 var jade = require('gulp-jade');
-var coffee = require('gulp-coffee');
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -24,7 +23,6 @@ gulp.task('build', function() {
   gutil.log(gutil.colors.cyan('Copying files...'));
   var filesSrc = ['./src/**', '!./src/**.jade'],
       filesDest = './app/';
-
   gulp.src(filesSrc)
     .pipe(changed(filesDest))
     .pipe(gulp.dest(filesDest));
