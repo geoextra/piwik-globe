@@ -23,7 +23,6 @@
     "jquery": "~2.1.3",
     "three.js": "*",
     "tweenjs": "*",
-    "moment": "~2.9.0",
     "system.js": "mrdoob/system.js",
     "dropdown.js": "*"
   }
