@@ -24,6 +24,7 @@
     "three.js": "*",
     "tweenjs": "*",
     "system.js": "mrdoob/system.js",
-    "dropdown.js": "*"
+    "dropdown.js": "*",
+    "animate.css": "~3.2.0"
   }
 }

@@ -78,7 +78,7 @@ $(document).ready( function() {
           });
 
           $("#addDataToggle").prop('disabled', true);
-          $("#changeSiteToggle, #changeTimeToggle").prop('disabled', false);
+          $("#changeSiteToggle, #changeTimeToggle").prop('disabled', false).addClass('animated flash');
 
           $('#addData').modal('hide');
           swal({
