@@ -1,4 +1,6 @@
 /**
+ * THIS IS A MODIFIED VERSION OF:
+ *
  * dat.globe Javascript WebGL Globe Toolkit
  * http://dataarts.github.com/dat.globe
  *
