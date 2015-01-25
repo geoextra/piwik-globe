@@ -22,14 +22,16 @@ block content
   
   #title
     h1 #{app.name}
-  
+    noscript.
+      #{app.name} needs JavaScript!
+
   #ui
     #changeSite.collapse
       .panel.panel-material-red
         .panel-heading
           h3.panel-title Select your site:
         .panel-body
-          .input-group.form-group.form-group-material-red
+          .form-group.form-group-material-red
             select#site.form-control.dropdown-menu-material-red(placeholder='One of your sites...')
     
     #changeTime.collapse
@@ -38,7 +40,7 @@ block content
           h3.panel-title Choose the dates to display:
         .panel-body
           #date
-            .input-daterange.input-group.form-group.form-group-material-red
+            .input-daterange.form-group.form-group-material-red
               input#startdate.input-sm.form-control(type='text', name='start')
               span.input-group-addon to
               input#enddate.input-sm.form-control(type='text', name='end')
@@ -56,15 +58,17 @@ block content
               b Please type in your data, it won't send to anybody:
               .row
                 .col-md-6
-                  .input-group.form-group.form-group-material-red
-                    input#url.form-control.floating-label(type='url', placeholder='Piwik-URL')
-                    input#token.form-control.floating-label(type='text', placeholder='Access-Token')
+                  br
+                  .form-group.form-group-material-red
+                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL')
+                  .form-group.form-group-material-red
+                    input#token.form-control.floating-label.input-lg(type='text', placeholder='Access-Token')
                 .col-md-6
-                  .input-group.form-group.form-group-material-red
+                  .form-group.form-group-material-red
                     #useDemo.checkbox.checkbox-material-red
                       label
                         input(type='checkbox')
-                        | Use demo.piwik.org &nbsp;
+                        | &nbsp; Use demo.piwik.org
             |       
             .modal-footer
               button.btn.btn-default(type='button', data-dismiss='modal') Close
