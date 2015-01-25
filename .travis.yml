@@ -14,3 +14,4 @@ deploy:
     master: development
   on:
     repo: staticshowdown/ss15-develofy
+  skip_cleanup: true
