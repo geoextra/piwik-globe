@@ -12,9 +12,9 @@
   "author": "Moritz Gehlhaar / Team Develofy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/staticshowdown/ss15-develofy/issues"
+    "url": "https://github.com/geoextra/piwik-globe/issues"
   },
-  "homepage": "https://github.com/staticshowdown/ss15-develofy",
+  "homepage": "https://github.com/geoextra/piwik-globe",
   "private": true,
   "dependencies": {
     "browser-sync": "^1.9.1",
