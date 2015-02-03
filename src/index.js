@@ -51,10 +51,6 @@ $(document).ready( function() {
     var startdate = $('#startdate').val();
     var enddate = $('#enddate').val();
 
-    console.log(idSite);
-    console.log(startdate);
-    console.log(enddate);
-
     if (idSite && startdate && enddate) {
       updateGlobe(url, token, idSite, startdate + ',' + enddate);
     }
@@ -125,7 +121,6 @@ $(document).ready( function() {
             globeData.push(city.lat, city.long, city.nb_visits);
           }
         });
-        console.log(globeData);
         if(globeData.lenght < 3) {
           swal({
             title: 'Data error!',
@@ -137,7 +132,7 @@ $(document).ready( function() {
         globe.addData(globeData, {format: 'magnitude', name: index, animated: true});
         globe.createPoints();
         globe.animate();
-        index += 1;
+        index++;
       })
       .fail(function() {
         swal({

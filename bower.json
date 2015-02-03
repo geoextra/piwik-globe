@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A web app, which displays Piwik data on a cool WebGL globe.",
   "authors": [
-    "Moritz Gehlhaar / Team Develofy"
+    "Moritz Gehlhaar"
   ],
   "license": "MIT",
   "homepage": "https://github.com/geoextra/piwik-globe",

@@ -13,6 +13,8 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+'use strict';
+
 var DAT = DAT || {};
 
 DAT.Globe = function(container, opts) {

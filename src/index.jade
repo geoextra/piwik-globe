@@ -9,14 +9,14 @@ block head
   link(href='./index.css', rel='stylesheet')
 
 block footer
-  script(src='./check.js')
-  script(src='./third-party/dropdown.js/jquery.dropdown.js')
-  script(src='./third-party/bootstrap-datepicker/js/bootstrap-datepicker.js')
-  script(src='./third-party/sweetalert/lib/sweet-alert.min.js')
-  script(src='./third-party/three.js/three.min.js')
-  script(src='./third-party/tweenjs/build/tween.min.js')
-  script(src='./third-party/globe.js')
-  script(src='./index.js')
+  script(src='./check.js', type='text/javascript', language='javascript')
+  script(src='./third-party/dropdown.js/jquery.dropdown.js', type='text/javascript', language='javascript')
+  script(src='./third-party/bootstrap-datepicker/js/bootstrap-datepicker.js', type='text/javascript', language='javascript')
+  script(src='./third-party/sweetalert/lib/sweet-alert.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/three.js/three.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/tweenjs/build/tween.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/globe.js', type='text/javascript', language='javascript')
+  script(src='./index.js', type='text/javascript', language='javascript')
 
 block content
   #globe
@@ -24,7 +24,7 @@ block content
   #title
     h1 #{app.name}
     noscript.
-      #{app.name} needs JavaScript!
+      #{app.name} needs JavaScript! Please activate it in your browser settings...
 
   #ui
     #changeSite.collapse
@@ -61,7 +61,7 @@ block content
                 .col-md-6
                   br
                   .form-group.form-group-material-red
-                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='http://analytics.example.org/')
+                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='https://analytics.example.org/')
                   .form-group.form-group-material-red
                     input#token.form-control.floating-label.input-lg(type='text', placeholder='Access-Token', value='te251m3u27ci3alb914ijb245fa14yfs')
                 .col-md-6
