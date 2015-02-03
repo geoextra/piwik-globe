@@ -20,7 +20,7 @@ block footer
 
 block content
   #globe
-  
+
   #title
     h1 #{app.name}
     noscript.
@@ -34,7 +34,7 @@ block content
         .panel-body
           .form-group.form-group-material-red
             select#site.form-control.dropdown-menu-material-red(placeholder='One of your sites...')
-    
+
     #changeTime.collapse
       .panel.panel-material-red
         .panel-heading
@@ -45,7 +45,7 @@ block content
               input#startdate.input-sm.form-control(type='text', name='start')
               span.input-group-addon to
               input#enddate.input-sm.form-control(type='text', name='end')
-    
+
     #addData.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDataLabel', aria-hidden='true')
       .modal-dialog
           .modal-content
@@ -75,7 +75,7 @@ block content
               button.btn.btn-default(type='button', data-dismiss='modal') Close
               |         
               button#addDataButton.btn.btn-primary.btn-material-red(type='button') Add my data!
-    
+
     #menu
       button#addDataToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-content-add(data-toggle='modal', data-target='#addData')
       button#changeSiteToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-av-web(data-toggle='collapse', data-target='#changeSite', disabled)
