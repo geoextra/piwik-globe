@@ -1,5 +1,5 @@
 {
-  "name": "ss15-develofy",
+  "name": "piwik-globe",
   "root": "./app/",
   "clean_urls": true,
   "error_page": "error.html"

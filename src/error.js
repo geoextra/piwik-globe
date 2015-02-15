@@ -1,6 +1,6 @@
-'use strict';
-
 $(document).ready( function() {
+  'use strict';
+
   $.material.init();
   if (System.support.webgl) {
   	$('#webgl').prop('checked', true);

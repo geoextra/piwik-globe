@@ -9,22 +9,22 @@ block head
   link(href='./index.css', rel='stylesheet')
 
 block footer
-  script(src='./check.js')
-  script(src='./third-party/dropdown.js/jquery.dropdown.js')
-  script(src='./third-party/bootstrap-datepicker/js/bootstrap-datepicker.js')
-  script(src='./third-party/sweetalert/lib/sweet-alert.min.js')
-  script(src='./third-party/three.js/three.min.js')
-  script(src='./third-party/tweenjs/build/tween.min.js')
-  script(src='./third-party/globe.js')
-  script(src='./index.js')
+  script(src='./check.js', type='text/javascript', language='javascript')
+  script(src='./third-party/dropdown.js/jquery.dropdown.js', type='text/javascript', language='javascript')
+  script(src='./third-party/bootstrap-datepicker/js/bootstrap-datepicker.js', type='text/javascript', language='javascript')
+  script(src='./third-party/sweetalert/lib/sweet-alert.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/three.js/three.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/tweenjs/build/tween.min.js', type='text/javascript', language='javascript')
+  script(src='./third-party/globe.js', type='text/javascript', language='javascript')
+  script(src='./index.js', type='text/javascript', language='javascript')
 
 block content
   #globe
-  
+
   #title
     h1 #{app.name}
     noscript.
-      #{app.name} needs JavaScript!
+      #{app.name} needs JavaScript! Please activate it in your browser settings...
 
   #ui
     #changeSite.collapse
@@ -34,7 +34,7 @@ block content
         .panel-body
           .form-group.form-group-material-red
             select#site.form-control.dropdown-menu-material-red(placeholder='One of your sites...')
-    
+
     #changeTime.collapse
       .panel.panel-material-red
         .panel-heading
@@ -45,7 +45,7 @@ block content
               input#startdate.input-sm.form-control(type='text', name='start')
               span.input-group-addon to
               input#enddate.input-sm.form-control(type='text', name='end')
-    
+
     #addData.modal.fade(tabindex='-1', role='dialog', aria-labelledby='addDataLabel', aria-hidden='true')
       .modal-dialog
           .modal-content
@@ -61,7 +61,7 @@ block content
                 .col-md-6
                   br
                   .form-group.form-group-material-red
-                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='http://analytics.example.org/')
+                    input#url.form-control.floating-label.input-lg(type='url', placeholder='Piwik-URL', value='https://analytics.example.org/')
                   .form-group.form-group-material-red
                     input#token.form-control.floating-label.input-lg(type='text', placeholder='Access-Token', value='te251m3u27ci3alb914ijb245fa14yfs')
                 .col-md-6
@@ -75,7 +75,7 @@ block content
               button.btn.btn-default(type='button', data-dismiss='modal') Close
               |         
               button#addDataButton.btn.btn-primary.btn-material-red(type='button') Add my data!
-    
+
     #menu
       button#addDataToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-content-add(data-toggle='modal', data-target='#addData')
       button#changeSiteToggle.btn.btn-primary.btn-material-red.btn-fab.btn-raised.mdi-av-web(data-toggle='collapse', data-target='#changeSite', disabled)

@@ -2,17 +2,17 @@ $(document).ready( function() {
   'use strict';
 
   $.material.init();
-  
+
   $('#site').dropdown();
-  
+
   $('#date .input-daterange').datepicker({
     format: "yyyy-mm-dd",
     endDate: "today"
   });
-  
+
   // create the globe
   var globeObject = document.getElementById('globe');
-  var color = function() { 
+  var color = function() {
     var c = new THREE.Color('rgb(244,67,54)');
     return c;
   };
@@ -24,7 +24,7 @@ $(document).ready( function() {
   var url, token;
 
   // demo checkbox
-  var piwikDemo = {url: 'http://demo.piwik.org/', token: 'anonymous'};
+  var piwikDemo = {url: document.location.protocol + '//demo.piwik.org/', token: 'anonymous'};
   $('#useDemo input:checkbox').change( function() {
     if ($('#useDemo input:checkbox').prop('checked')) {
       $('#url, #token').prop('disabled', true);
@@ -44,16 +44,12 @@ $(document).ready( function() {
       checkSite(url, token);
     }
   });
-  
+
   // update when input changed
   $('#site, #startdate, #enddate').change( function() {
     var idSite = $('#site option:selected').val();
     var startdate = $('#startdate').val();
     var enddate = $('#enddate').val();
-
-    console.log(idSite);
-    console.log(startdate);
-    console.log(enddate);
 
     if (idSite && startdate && enddate) {
       updateGlobe(url, token, idSite, startdate + ',' + enddate);
@@ -68,7 +64,7 @@ $(document).ready( function() {
       format: 'JSON',
       token_auth: token
     };
-    
+
     $.getJSON(url, params)
       .done(function(data) {
         // do a simple check
@@ -105,7 +101,7 @@ $(document).ready( function() {
         });
     });
   }
-  
+
   function updateGlobe(url, token, idSite, date) {
       var params = {
       module: 'API',
@@ -116,7 +112,7 @@ $(document).ready( function() {
       format: 'JSON',
       token_auth: token
     };
-    
+
     $.getJSON(url, params)
       .done(function(data) {
         var globeData = [];
@@ -125,7 +121,6 @@ $(document).ready( function() {
             globeData.push(city.lat, city.long, city.nb_visits);
           }
         });
-        console.log(globeData);
         if(globeData.lenght < 3) {
           swal({
             title: 'Data error!',
@@ -137,7 +132,7 @@ $(document).ready( function() {
         globe.addData(globeData, {format: 'magnitude', name: index, animated: true});
         globe.createPoints();
         globe.animate();
-        index += 1;
+        index++;
       })
       .fail(function() {
         swal({

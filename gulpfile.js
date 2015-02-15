@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var changed = require('gulp-changed');
-var clean = require('gulp-clean');
+var del = require('del');
 var jade = require('gulp-jade');
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync');
@@ -19,7 +19,7 @@ gulp.task('build', function() {
     .pipe(changed(jadeDest))
     .pipe(jade({pretty: true}).on('error', gutil.log))
     .pipe(gulp.dest(jadeDest));
-  
+
   gutil.log(gutil.colors.cyan('Copying files...'));
   var filesSrc = ['./src/**', '!./src/**.jade'],
       filesDest = './app/';
@@ -30,8 +30,7 @@ gulp.task('build', function() {
 
 gulp.task('clean', function() {
   gutil.log(gutil.colors.cyan('Cleanup...'));
-  gulp.src('./app/')
-    .pipe(clean().on('error', gutil.log));
+  del('./app/');
 });
 
 gulp.task('watch', function() {
@@ -44,7 +43,7 @@ gulp.task('serve', function() {
       baseDir: 'app'
     }
   });
-  
+
   gulp.watch('./app/**', reload);
 });
 
